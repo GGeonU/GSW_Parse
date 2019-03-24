@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/player_list"
+        android:title="Roster" />
+
+    <item
+        android:id="@+id/team_schedule"
+        android:title="Team Schedule" />
+
+    <item
+        android:id="@+id/team_leader"
+        android:title="Team Leader"/>
+
+    <item
+        android:id="@+id/team_rank"
+        android:title="Standings"/>
+
+</menu>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E7E9"
+    tools:context=".ShowPlayerStats">
+
+    <FrameLayout
+        android:id="@+id/player_info_tab"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="@drawable/profile_backgorund_color"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:src="@drawable/ic_warriors_logo"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/player_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitEnd"
+                android:layout_weight="1.15"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="0.5dp"
+                android:src="@drawable/curry_face"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.85"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="5"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5" />
+
+                <TextView
+                    android:id="@+id/player_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="#ffffff"
+                    android:text="Stephen"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/player_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="#ffffff"
+                    android:text="Curry"
+                    android:textSize="24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/player_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:text="#30"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="|"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/player_position"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffffff"
+                        android:text="Guard"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/player_stats"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/player_info_tab"
+        android:background="#66737C"
+        android:stretchColumns="*"
+        android:weightSum="9"
+        android:paddingTop="1dp">
+
+        <TableRow
+            android:layout_height="25dp"
+            android:layout_marginBottom="1dp"
+            android:background="#0B153C">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="2"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MPG"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="FG%"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3P%"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="FT%"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="PPG"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="RPG"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="APG"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="35dp"
+            android:layout_marginBottom="1dp"
+            android:background="#0B153C">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Season"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/mpg_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/fgp_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tpp_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ftp_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/ppg_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/rpg_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/apg_season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="1dp"
+            android:background="#0B153C">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Career"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/mpg_career"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/fgp_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tpp_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/ftp_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/ppg_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/rpg_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/apg_career"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/player_stats"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#CCD0D3"
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Height"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/player_height"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1.3"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textSize="19dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Born"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Age"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="From"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="NBA Debut"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Years In NBA"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2"
+                android:background="#FEFEFE"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Previously"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#CCD0D3"
+                android:orientation="vertical"
+                android:weightSum="9">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Weight"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/player_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1.3"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/born"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/debut"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/years"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/previously"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="2"
+                    android:background="#FEFEFE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

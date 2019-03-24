@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:weightSum="10"
+    android:orientation="horizontal"
+    android:paddingBottom="1dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="3.5"
+        android:background="#E6E8EA">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#ffffff">
+        </View>
+
+        <TextView
+            android:id="@+id/team_rank"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/team_logo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_gsw_logo" />
+
+        <TextView
+            android:id="@+id/tricode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:layout_marginRight="1dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="GSW"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="6.5"
+        android:weightSum="7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/win"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="W"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/loss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="L"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/win_pct"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Win%"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/gb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="GB"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/last_10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:text="L10"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/strk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="Strk"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
