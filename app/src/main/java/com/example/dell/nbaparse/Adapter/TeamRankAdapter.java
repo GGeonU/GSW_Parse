@@ -9,12 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.dell.nbaparse.R;
-import com.example.dell.nbaparse.TeamRankItem;
-import com.example.dell.nbaparse.Utils;
+import com.example.dell.nbaparse.ViewItem.TeamRankItem;
 
 import java.util.ArrayList;
-
-import javax.crypto.spec.PSource;
 
 public class TeamRankAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

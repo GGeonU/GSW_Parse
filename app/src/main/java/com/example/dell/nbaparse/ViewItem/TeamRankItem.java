@@ -1,4 +1,6 @@
-package com.example.dell.nbaparse;
+package com.example.dell.nbaparse.ViewItem;
+
+import com.example.dell.nbaparse.Utils;
 
 public class TeamRankItem {
 

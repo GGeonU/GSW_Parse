@@ -1,4 +1,4 @@
-package com.example.dell.nbaparse;
+package com.example.dell.nbaparse.Fragment;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dell.nbaparse.Adapter.TeamRankAdapter;
+import com.example.dell.nbaparse.R;
+import com.example.dell.nbaparse.ViewItem.TeamRankItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
