@@ -50,7 +50,7 @@ public class LeaderContent extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_point, container, false);
+        View view = inflater.inflate(R.layout.rank_view_pager, container, false);
         viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         tabLayout = (TabLayout) view.findViewById(R.id.tabb);
 
@@ -115,7 +115,7 @@ public class LeaderContent extends Fragment {
         @Override
         protected void onPostExecute(String part) {
             for(int i=0; i<urlList.size(); i++){
-                adapter.addFragment(new FragmentView().newInstance(stat.get(i).text().replaceAll("%", ""), name.get(i).text(),urlList.get(i), lastPlayer.text(), lastStat.text(), i+1, part.toLowerCase()), name.get(i).text()+"\n"+stat.get(i).text());
+                adapter.addFragment(new ShowLeader().newInstance(stat.get(i).text().replaceAll("%", ""), name.get(i).text(),urlList.get(i), lastPlayer.text(), lastStat.text(), i+1, part.toLowerCase()), name.get(i).text()+"\n"+stat.get(i).text());
             }
             viewPager.setAdapter(adapter);
             tabLayout.setupWithViewPager(viewPager);

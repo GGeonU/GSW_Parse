@@ -16,7 +16,6 @@ public class TeamRankItem {
     private String last10;
     private String strk;
 
-
     public TeamRankItem(int count, String tricode, String win, String loss,
                         String winPct, String gb, String last10, String strk) {
         this.count = count;

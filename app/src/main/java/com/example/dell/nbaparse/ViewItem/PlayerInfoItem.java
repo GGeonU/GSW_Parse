@@ -5,10 +5,10 @@ import android.media.Image;
 
 public class PlayerInfoItem {
 
-    Bitmap playerImage;
-    String playerName;
-    String playerNumber;
-    String playerPosition;
+    private Bitmap playerImage;
+    private String playerName;
+    private String playerNumber;
+    private String playerPosition;
 
     public Bitmap getPlayerImage() {
         return playerImage;

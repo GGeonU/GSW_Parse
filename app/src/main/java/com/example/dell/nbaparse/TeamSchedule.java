@@ -2,6 +2,7 @@ package com.example.dell.nbaparse;
 
 import android.app.ProgressDialog;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.design.widget.NavigationView;
@@ -44,6 +45,7 @@ public class TeamSchedule extends AppCompatActivity {
 
     Utils utils = new Utils();
 
+    private Toolbar toolbar;
     private InputStream inputStream;
     private String jsonString;
 
@@ -51,9 +53,6 @@ public class TeamSchedule extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
 
     ArrayList<ScheduleItem> scheduleItems = new ArrayList<>();
-
-    Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +72,6 @@ public class TeamSchedule extends AppCompatActivity {
     public class getData extends AsyncTask<Void, Void, Void> {
         private ProgressDialog progressDialog;
         private JSONObject season;
-        private JSONObject past;
 
         private ArrayList<String> seasonHomeAway = new ArrayList<>();
         private ArrayList<String> seasonDate = new ArrayList<>();
@@ -132,13 +130,19 @@ public class TeamSchedule extends AppCompatActivity {
                         String dateBuffer = season.optString("dateTimeUTC");
                         dateBuffer = dateBuffer.replace("T"," ");
                         Calendar cal = utils.getKoreanTime(dateBuffer);
+
                         String gameDate = cal.getTime().toString().substring(0, 10);
                         String gameTime = cal.getTime().toString().substring(11,16);
                         if(Integer.parseInt(gameTime.substring(0,2))<12){
                             gameTime = gameTime + " AM";
                         }
                         else{
-                            gameTime = gameTime + " PM";
+                            int timeBuffer = Integer.parseInt(gameTime.substring(0,2));
+                            if(timeBuffer == 12)
+                                break;
+
+                            timeBuffer = timeBuffer - 12;
+                            gameTime = timeBuffer + " PM";
                         }
 
                         seasonDate.add(gameDate);
@@ -148,7 +152,7 @@ public class TeamSchedule extends AppCompatActivity {
                         seasonTeamName.add(opponent.optString("name"));
                         count++;
                     }
-                    if (count == 10)
+                    if (count == 10 || array.getJSONObject(i+1).optString("seasonType").equals("pos"))
                         break;
                 }
 

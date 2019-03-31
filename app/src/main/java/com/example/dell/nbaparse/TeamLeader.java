@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.dell.nbaparse.Adapter.TabAdapter;
+import com.example.dell.nbaparse.Adapter.FragmentViewAdapter;
 import com.example.dell.nbaparse.Fragment.LeaderContent;
 
 public class TeamLeader extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class TeamLeader extends AppCompatActivity {
         setToolbar();
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
+        FragmentViewAdapter adapter = new FragmentViewAdapter(getSupportFragmentManager());
         adapter.addFragment(new LeaderContent().newInstance("PTS"), "Points");
         adapter.addFragment(new LeaderContent().newInstance("AST"), "Assist");
         adapter.addFragment(new LeaderContent().newInstance("REB"), "Rebound");

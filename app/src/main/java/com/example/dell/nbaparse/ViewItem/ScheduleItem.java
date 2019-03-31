@@ -10,12 +10,12 @@ import java.net.URLConnection;
 
 public class ScheduleItem {
 
-    String homeAway;
-    String date;
-    String time;
-    String area;
-    String teamName;
-    int r;
+    private String homeAway;
+    private String date;
+    private String time;
+    private String area;
+    private String teamName;
+    private int r;
 
     public ScheduleItem(String homeAway, String date, String time, String area, String teamName, int param) {
         this.homeAway = homeAway;
