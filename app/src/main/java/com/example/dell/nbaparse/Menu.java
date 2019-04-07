@@ -188,7 +188,7 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
         }
     }
 
-    public class getScheduleParser extends AsyncTask<Void, Void, Void> {
+    public class getScheduleParser extends AsyncTask<Void, Void, Void> {  // getGameData
         private ProgressDialog progressDialog;
 
         private String jsonString;
@@ -331,6 +331,9 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
         }
     }
 
+
+
+    // 종료 dialog
     @Override
     public void onBackPressed() {
         AlertDialog.Builder finishCheck = new AlertDialog.Builder(this);

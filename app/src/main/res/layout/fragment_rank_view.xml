@@ -28,7 +28,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.9"
+            android:layout_weight="1"
             android:weightSum="10"
             android:orientation="vertical"
             android:paddingLeft="15dp">
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.9"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="Last Season Leader"
                 android:gravity="center_vertical"/>
 
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.6"
-                android:textSize="19dp"
+                android:textSize="18dp"
                 android:text="Kevin Durant"
                 android:gravity="center_vertical"/>
 
@@ -123,7 +123,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.1"
+            android:layout_weight="1"
             android:weightSum="10"
             android:orientation="vertical">
 

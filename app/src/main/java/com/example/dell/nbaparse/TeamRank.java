@@ -28,7 +28,7 @@ public class TeamRank extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team_rank);
+        setContentView(R.layout.activity_rank);
 
         setToolbar();
         new getData().execute();

@@ -35,13 +35,12 @@ public class PlayerList extends AppCompatActivity {
     private ArrayList<Bitmap> playerImage = new ArrayList<>();
 
     private Toolbar toolbar;
-    private ListView roster;
+    private ListView roster;   // show player list
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_list);
-
         roster = (ListView) findViewById(R.id.roster);
 
         setToolbar();
