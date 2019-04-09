@@ -9,7 +9,7 @@
 
 ### 2. Roster
 ![Roster](https://steemitimages.com/350X0//https://user-images.githubusercontent.com/42676880/55765173-7a56ea00-5aa9-11e9-8a8d-20753f4d8a5c.jpg)
-- 팀의 라인업을 보여줍니다. 클릭하면 선수의 프로필을 볼 수 있습니다.
+- 팀의 라인업을 보여줍니다. 터치하면 그 선수의 프로필을 볼 수 있습니다.
 
 ### 3. profile
 ![profile](https://steemitimages.com/350X0//https://user-images.githubusercontent.com/42676880/55765170-7a56ea00-5aa9-11e9-9fc1-30902ccb5b6d.jpg)
@@ -21,7 +21,7 @@
 
 ### 5. Schedule
 ![Schedule](https://steemitimages.com/350X0//https://user-images.githubusercontent.com/42676880/55765175-7aef8080-5aa9-11e9-84fb-b99ae30f76f3.jpg)
-- 팀의 일정(시간, 상대 팀, 원정/홈 여부)을 보여줍니다.
+- 팀의 일정(시간, 상대 팀, 홈/원정 여부)을 보여줍니다(최대 10경기).
 
 ### 6. Team Leader
 ![Team Leader](https://steemitimages.com/350X0//https://user-images.githubusercontent.com/42676880/55765169-79be5380-5aa9-11e9-9b8a-4194d24d3845.jpg)
