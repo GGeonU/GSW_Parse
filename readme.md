@@ -3,7 +3,7 @@
 - GSW 팀과 선수들의 데이터를 제공합니다.
 
 ### 1. Main Page
-![Main](https://user-images.githubusercontent.com/42676880/55764286-e6375380-5aa5-11e9-87cc-abc03e775446.jpg)
+<img src="https://user-images.githubusercontent.com/42676880/55764286-e6375380-5aa5-11e9-87cc-abc03e775446.jpg" width:"30%" />
 - 팀의 성적과 최근경기와 다음경기를 알려줍니다.
 
 ### 2. Drawer
