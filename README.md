@@ -1,5 +1,6 @@
 # GSW Parse APP
-- Use Jsoup library, html, json Data Parsing
+- Use Jsoup library 
+- html, json Data Parsing
 - GSW 팀과 선수들의 데이터를 제공합니다.
 
 ### 1. Main Page
